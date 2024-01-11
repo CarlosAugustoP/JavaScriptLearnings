@@ -33,17 +33,17 @@ module.exports = {
 
     createUser(request, response) {
         const { body } = request;
+        
         const lastUserId = users[users.length - 1].id;
             
-            const newUser = {
-                id: lastUserId + 1,
-                name: body.name,
-            };
+        const newUser = {
+            id: lastUserId + 1,
+            name: body.name,
+        };
 
-            users.push(newUser);
+        users.push(newUser);
 
-            response.send(200, newUser);
-
+        response.send(200, newUser);
     },
     
 }
